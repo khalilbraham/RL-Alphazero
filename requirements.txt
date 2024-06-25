@@ -1,0 +1,7 @@
+tensorboard
+tensorboardX
+dm_tree
+gymnasium==0.29.1
+torch==2.1.2
+ray==2.9.1
+pandas==2.2.0

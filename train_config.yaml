@@ -1,0 +1,38 @@
+env_config:
+  n_partition: 3
+  max_per_partition: 13
+
+rollouts: 
+  num_rollout_workers: 20
+  rollout_fragment_length: 50
+
+train_batch_size: 500
+sgd_minibatch_size: 64
+lr: 0.0001
+num_sgd_iter: 1
+
+mcts_config: 
+  puct_coefficient: 1.5
+  num_simulations: 100
+  temperature: 1
+  dirichlet_epsilon: 0.2
+  dirichlet_noise: 0.03
+  argmax_tree_policy: false
+  add_dirichlet_noise: true
+
+ranked_rewards:
+  enable: true
+  percentile: 75
+  buffer_max_length: 250
+
+model_config:
+  out_dim: 3
+  in_dim: 4
+  d_model: 128
+  nhead: 8
+  dim_feedforward: 256
+  n_layers: 4
+  max_len: 64
+
+num_gpus: 1
+timesteps_total: 1000000
